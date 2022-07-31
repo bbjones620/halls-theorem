@@ -1,0 +1,247 @@
+body {
+//margin: 50px;
+padding: 50px;
+display: flex;
+flex-direction: column;
+}
+
+.options-container {
+display: flex;
+flex-direction: column;
+margin: auto;
+}
+
+.game-container {
+height: 400px;
+}
+.slippy {
+display: flex;
+flex-direction: row;
+margin: auto;
+}
+
+.slidercontainer {
+display: flex;
+flex-direction: column;
+padding: 30px;
+}
+
+.blacksquare {
+display: flex;
+width: 100%;
+height: 100%;
+background-color: rgb(0,0,0);
+position: absolute;
+aspect-ratio: 1/1;
+}
+
+.whitesquare {
+display: flex;
+width: 100%;
+height: 100%;
+background-color: rgb(255,255,255);
+position: absolute;
+aspect-ratio: 1/1;
+}
+
+.row {
+display: flex;
+flex-direction: row;
+min-width: 0;
+min-height: 0;
+}
+
+.game {
+display: flex;
+flex-direction: column;
+max-width: 1000px;
+max-height: 400px;
+min-width: 0;
+//border: 3px solid #ccc;
+}
+
+.greensquare {
+display: flex;
+width: 80%;
+height: 80%;
+top: 10%;
+left: 10%;
+background-color: rgb(0,255,0);
+position: absolute;
+visibility: hidden
+}
+
+.whitegreensquare {
+display: flex;
+width: 80%;
+height: 80%;
+top: 10%;
+left: 10%;
+position: absolute;
+border-radius: 50%;
+background-color: rgb(0,0,0);
+background-size: cover;
+background-position: center;
+visibility: hidden
+}
+
+.whitegreensquare:after {
+position: absolute;
+width: 80%;
+height: 80%;
+transform: translate(12.5%,12.5%);
+content: '';
+border-radius: 50%;
+background-color: rgb(255,255,255)
+}
+
+.whiteredsquare {
+position: absolute;
+width: 80%;
+height: 80%;
+top: 10%;
+left: 10%;
+clip-path: polygon(0 90%, 40% 50%, 0 10%, 10% 0, 50% 40%, 90% 0, 100% 10%, 60% 50%, 100% 90%, 90% 100%, 50% 60%, 10% 100%);
+background-color: rgb(0,0,0);
+}
+
+.blackgreensquare {
+display: flex;
+width: 80%;
+height: 80%;
+top: 10%;
+left: 10%;
+background-color: rgb(255,255,255);
+position: absolute;
+border-radius: 50%;
+background-size: cover;
+background-position: center;
+visibility: hidden
+}
+
+.blackgreensquare:after {
+position: absolute;
+width: 80%;
+height: 80%;
+transform: translate(12.5%,12.5%);
+content: '';
+border-radius: 50%;
+background-color: rgb(0,0,0)
+}
+
+.bluesquare {
+display: flex;
+width: 80%;
+height: 80%;
+top: 10%;
+left: 10%;
+background-color: rgb(0,0,255);
+position: absolute;
+visibility: hidden
+}
+
+.blueleftarrow {
+display: flex;
+width: 80%;
+height: 80%;
+clip-path: polygon(25% 20%, 100% 20%, 100% 80%, 25% 80%, 0% 50%);
+top: 10%;
+left: 10%;
+background-color: rgb(0,0,255);
+position: absolute;
+visibility: hidden
+}
+
+.bluedownarrow {
+display: flex;
+width: 80%;
+height: 80%;
+clip-path: polygon(20% 0%,80% 0%,80% 75%,50% 100%,20% 75%);
+top: 10%;
+left: 10%;
+background-color: rgb(0,0,255);
+position: absolute;
+visibility: hidden
+}
+
+.squarecontainer {
+position: relative;
+width: 100%;
+height: 100%;
+border: 3px solid #ccc;
+aspect-ratio: 1/1;
+min-height: 0;
+}
+
+.arrowcontainer {
+position: relative;
+width: 100%;
+height: 100%;
+border: 3px solid #777;
+aspect-ratio: 1/1;
+min-height: 0;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+} 
+
+.button-type {
+background-color: #727272;
+border: 5px solid #000000;
+color: white;
+padding: 30px;
+text-align: center;
+border-radius: 15px;
+display: inline-block;
+font-size: 20px;
+cursor: pointer;
+width: 200px;
+transition-duration: 0.2s;
+}
+
+.button-type:hover {
+background-color: #F3F32A;
+color: black;
+}
