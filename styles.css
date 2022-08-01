@@ -5,6 +5,9 @@ display: flex;
 flex-direction: column;
 }
 
+p {font-family: arial;
+font-size: 20px}
+
 .options-container {
 display: flex;
 flex-direction: column;
